@@ -1,0 +1,43 @@
+import pyttsx3
+
+
+
+
+
+def speak(text):
+
+    engine = pyttsx3.init()
+
+    engine.say(text)
+
+    engine.runAndWait()
+
+
+
+
+
+if __name__ == '__main__':
+
+    print("Welcome to Chat bot created by Mustafa")
+
+    speak("Welcome to Chat bot created by Mustafa")
+
+    while True:
+
+        WhatToSpeak = input("Enter what you want to say (type 'bye' to exit): ")
+
+
+
+        if WhatToSpeak.lower() == "bye":
+
+            speak("Goodbye, friends!")
+
+            break
+
+        elif WhatToSpeak.lower() == "hello":
+
+            speak("Hello friends! This is Chat bot made by Ghulam Mustafa. How can I help you?")
+
+        else:
+
+            speak(WhatToSpeak)
